@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Todo List</string>
+    <string name="main_title">Список справ</string>
+    <string name="show_all_btn">Показати всі справи</string>
+    <string name="title">Заголовки списків</string>
+    <string name="mew_title_entry">Введіть новий заголовок</string>
+    <string name="back">Назад</string>
+    <string name="enterName">Введіть назву</string>
+    <string name="date">Дата</string>
+</resources>

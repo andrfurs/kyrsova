@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    Назва програми-->
+    <TextView
+        android:id="@+id/toDoList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:text="@string/main_title" />
+
+<!--    Заголовки списків-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toDoList"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="@string/title" />
+
+<!--    Кнопка "Показати всі справи"-->
+    <Button
+        android:id="@+id/showAll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/title"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="5dp"
+        android:onClick="showAll"
+        android:text="@string/show_all_btn"
+        app:cornerRadius="0dp" />
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="220dp"-->
+<!--        android:layout_above="@+id/layout1"-->
+<!--        android:layout_below="@+id/button2"-->
+<!--        android:layout_marginHorizontal="15dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <ListView-->
+<!--            android:id="@+id/listView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+<!--    </LinearLayout>-->
+
+<!--    Вигляд для списку заголовків справ-->
+    <ListView
+        android:id="@+id/titlesList"
+        android:layout_above="@+id/newTitle"
+        android:layout_below="@+id/showAll"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="15dp"
+        android:layout_height="match_parent" />
+
+<!--    Макет для розміщення елементів для додавання нового заголовку-->
+    <LinearLayout
+        android:id="@+id/newTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+<!--        Поле для вводу заголовку нового списку справ-->
+        <EditText
+            android:id="@+id/newTitleEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLength="50"
+            android:hint="@string/mew_title_entry" />
+
+<!--        Кнопка "+"-->
+        <Button
+            android:id="@+id/titleAddBtn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="addTitle"
+            android:text="+" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

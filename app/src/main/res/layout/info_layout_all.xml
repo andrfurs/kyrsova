@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginVertical="15dp">
+
+<!--    Макет для розміщення елементів відображення справ-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+<!--        Назва справи-->
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:text="Назва"/>
+
+<!--        Дата справи-->
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textSize="18sp"
+            android:text="Дата"/>
+
+<!--        Чекбокс виконання справи-->
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
